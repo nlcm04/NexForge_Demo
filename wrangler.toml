@@ -1,0 +1,11 @@
+# Cloudflare config for deploying NexForge as a static site with `wrangler deploy`.
+# Tells Wrangler which folder holds the html/css/js (the error was that it couldn't find one).
+name = "nexforge"
+compatibility_date = "2026-08-04"
+
+# Serve everything in this directory as static assets.
+# "." = the folder that contains index.html (this folder). If your repo has the site
+# inside a sub-folder, either set Cloudflare's build "Root directory" to that sub-folder,
+# or change this to e.g. directory = "./nexforge-site".
+[assets]
+directory = "."
